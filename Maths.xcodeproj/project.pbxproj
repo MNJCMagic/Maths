@@ -11,6 +11,7 @@
 		27BD7A09207D114A00D7F96E /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A08207D114A00D7F96E /* AdditionQuestion.m */; };
 		27BD7A0C207D206200D7F96E /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A0B207D206200D7F96E /* InputHandler.m */; };
 		27BD7A0F207D23DC00D7F96E /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A0E207D23DC00D7F96E /* ScoreKeeper.m */; };
+		27BD7A2E207D9C9900D7F96E /* QuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A2D207D9C9900D7F96E /* QuestionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		27BD7A0B207D206200D7F96E /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		27BD7A0D207D23DC00D7F96E /* ScoreKeeper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
 		27BD7A0E207D23DC00D7F96E /* ScoreKeeper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeper.m; sourceTree = "<group>"; };
+		27BD7A2C207D9C9900D7F96E /* QuestionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionManager.h; sourceTree = "<group>"; };
+		27BD7A2D207D9C9900D7F96E /* QuestionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 		27BD79FF207D0FA100D7F96E /* Maths */ = {
 			isa = PBXGroup;
 			children = (
+				27BD7A2C207D9C9900D7F96E /* QuestionManager.h */,
+				27BD7A2D207D9C9900D7F96E /* QuestionManager.m */,
 				27BD7A00207D0FA100D7F96E /* main.m */,
 				27BD7A07207D114A00D7F96E /* AdditionQuestion.h */,
 				27BD7A08207D114A00D7F96E /* AdditionQuestion.m */,
@@ -134,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BD7A2E207D9C9900D7F96E /* QuestionManager.m in Sources */,
 				27BD7A0F207D23DC00D7F96E /* ScoreKeeper.m in Sources */,
 				27BD7A01207D0FA100D7F96E /* main.m in Sources */,
 				27BD7A0C207D206200D7F96E /* InputHandler.m in Sources */,

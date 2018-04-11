@@ -19,12 +19,23 @@
         int first = arc4random_uniform(1000);
         int second = arc4random_uniform(1000);
         _answer = first + second;
+        _startTime = [NSDate date];
         NSLog(@"What is %d plus %d?", first, second);
-        
-        
-        
     }
     return self;
+}
+
+-(NSInteger)answer {
+    _endTime = [NSDate date];
+    return _answer;
+}
+
+-(NSTimeInterval)answerTime {
+    
+    _answerTime = [self.endTime timeIntervalSinceDate:self.startTime];
+   
+    return _answerTime;
+
 }
 
 @end

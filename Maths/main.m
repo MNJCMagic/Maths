@@ -10,11 +10,15 @@
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        // make scorekeeper and questionmanager
         ScoreKeeper *keeper = [[ScoreKeeper alloc]init];
+        QuestionManager *manager = [[QuestionManager alloc] init];
+        
         BOOL play = true;
         
         while (play) {
@@ -22,6 +26,7 @@ int main(int argc, const char * argv[]) {
             //ask question
             AdditionQuestion *question = [[AdditionQuestion alloc] init];
             
+            // get response
             InputHandler *answer = [[InputHandler alloc]init];
             [answer convertedAnswer];
             
@@ -31,7 +36,6 @@ int main(int argc, const char * argv[]) {
             }
             
            // NSLog(@"your answer is %@", convertedUserAnswer);
-            
             NSInteger intAnswer = [answer.solution intValue];
             
             if (intAnswer == question.answer) {
@@ -41,7 +45,15 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Wrong!");
                 keeper.wrong++;
             }
+            
+            //store question in questionmanager array
+            [manager.questions addObject:question];
+            
+            //log score
             [keeper percentage];
+            
+            //log time output
+            NSLog(@"%@", manager.timeOutput);
             
             
         }
