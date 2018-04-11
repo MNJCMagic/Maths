@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -18,13 +19,17 @@ int main(int argc, const char * argv[]) {
         // make scorekeeper and questionmanager
         ScoreKeeper *keeper = [[ScoreKeeper alloc]init];
         QuestionManager *manager = [[QuestionManager alloc] init];
+        QuestionFactory *factory = [[QuestionFactory alloc] init];
         
         BOOL play = true;
         
         while (play) {
             
-            //ask question
-            AdditionQuestion *question = [[AdditionQuestion alloc] init];
+            //ask question old way
+            //Question *question = [[Question alloc] init];
+            
+            Question *question = [factory generateRandomQuestion];
+            NSLog(@"%@", question.question);
             
             // get response
             InputHandler *answer = [[InputHandler alloc]init];

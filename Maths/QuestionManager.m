@@ -20,7 +20,7 @@
 }
 
 -(NSString*)timeOutput {
-    for (AdditionQuestion *time in _questions) {
+    for (Question *time in _questions) {
         self.totalTime = self.totalTime + time.answerTime ;
     }
     self.averageTime = self.totalTime / [self.questions count];
